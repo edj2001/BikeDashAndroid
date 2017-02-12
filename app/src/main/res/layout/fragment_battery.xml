@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright 2014 The Android Open Source Project
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myapp="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:rowCount="3"
+    android:columnCount="6">
+        <DataDisplay.DataText
+            android:id="@+id/vbattery"
+            android:text="batt"
+            android:textSize="@dimen/small_text_size"
+            android:gravity="right"
+            android:width="80dp"
+            myapp:Alarm1="&lt;30,Warning"
+            myapp:Alarm2="&lt;26,Alarm"
+            myapp:unitFieldReference="@+id/vbattery_units"
+            myapp:varName="vb"/>
+        <TextView
+            android:id="@+id/vbattery_units"
+            android:text="V"
+            android:textSize="@dimen/small_text_size"
+            android:paddingLeft="8dp" />
+        <Space
+            android:layout_width="12dp" />
+        <DataDisplay.DataText
+            android:id="@+id/ibattery"
+            android:text="batt"
+            android:textSize="@dimen/small_text_size"
+            android:width="80dp"
+            android:gravity="right"
+            myapp:Alarm1="&gt;8,Warning"
+            myapp:Alarm2="&gt;14,Alarm"
+            myapp:unitFieldReference="@+id/ibattery_units"
+            myapp:varName="ib"/>
+            />
+        <TextView
+            android:id="@+id/ibattery_units"
+            android:text="A"
+            android:textSize="@dimen/small_text_size"
+            android:paddingLeft="8dp" />
+        <Button
+            android:id="@+id/button_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/button_padding"
+            android:paddingRight="@dimen/button_padding"
+            android:background="#fd0095ff"
+            android:textColor="#fff"
+            android:text="@string/send"
+            android:textSize="@dimen/Button_font_size"
+            android:textAlignment="center"
+            android:gravity="right|center_vertical" />
+
+
+        <DataDisplay.DataText
+            android:id="@+id/qbatteryused"
+            android:text="batt"
+            android:textSize="@dimen/small_text_size"
+            android:width="80dp"
+            android:gravity="right"
+            android:longClickable="true"
+            myapp:varName="qb"/>
+            />
+        <TextView
+            android:id="@+id/qbatteryused_units"
+            android:text="Ah"
+            android:textSize="@dimen/small_text_size"
+            android:paddingLeft="8dp" />
+        <Space />
+        <DataDisplay.DataText
+            android:id="@+id/qbatpctremaining"
+            android:text="rem"
+            android:textSize="@dimen/small_text_size"
+            android:width="80dp"
+            android:gravity="right"
+            myapp:Alarm1="&lt;10,Warning"
+            myapp:Alarm2="&lt;5,Alarm"
+            myapp:unitFieldReference="@+id/qbatpctremaining_units"
+            />
+
+        <TextView
+            android:id="@+id/qbatpctremaining_units"
+            android:text="%"
+            android:textSize="@dimen/small_text_size"
+            android:paddingLeft="8dp" />
+        <Space />
+
+</GridLayout>
+
+

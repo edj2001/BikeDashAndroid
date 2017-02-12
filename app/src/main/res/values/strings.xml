@@ -1,0 +1,17 @@
+<resources>
+
+    <string name="app_name">Bike Dash</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_device_speed_demo">DeviceSpeedDemoActivity</string>
+    <string name="info">--</string>
+    <string name="about_menu_name">About</string>
+    <string name="about_message">GPS device speed.</string>
+    <string name="unit_km">Kilometer</string>
+    <string name="unit_miles">Miles</string>
+    <string name="setting_unit">Measurement Unit</string>
+    <string name="reset">Reset</string>
+    <string name="noUpdate1">-</string>
+    <string name="noUpdate2">--</string>
+    <string name="noUpdatet">-</string>
+</resources>

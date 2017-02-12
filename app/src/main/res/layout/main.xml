@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myapp="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:keepScreenOn="true"
+    >
+    <DataDisplay.DataText
+        android:id="@+id/info_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="168sp"
+        android:text="@string/noUpdate2"
+        android:paddingBottom="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        myapp:yellowLimit="50"
+        myapp:customFont="LED.Font.ttf"
+        android:singleLine="false" />
+    <TextView
+        android:id="@+id/speed_units"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_alignTop="@+id/info_message"
+        android:layout_toRightOf="@+id/info_message"
+        android:text="@string/noUpdate2"
+    />
+    <TextView
+        android:id="@+id/speed_fraction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="60sp"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_alignBaseline="@+id/info_message"
+        android:layout_toRightOf="@+id/info_message"
+        android:text="@string/noUpdate1" />
+    <TextView
+        android:id="@+id/current_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/small_text_size"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:paddingTop="0dp"
+        android:text="@string/noUpdate2"
+        android:layout_below="@+id/info_message"
+        android:layout_alignParentLeft="true" />
+    <TextView
+        android:id="@+id/distance_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/small_text_size"
+        android:text="@string/noUpdate2"
+        android:layout_marginRight="8dp"
+        android:gravity="right"
+        android:layout_toLeftOf="@+id/distance_units"
+        android:layout_alignBaseline="@+id/current_time" />
+    <TextView
+        android:id="@+id/distance_units"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/small_text_size"
+        android:text="@string/noUpdate2"
+        android:layout_marginRight="8dp"
+        android:gravity="right"
+        android:layout_alignBaseline="@+id/current_time"
+        android:layout_alignParentRight="true" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset"
+        android:id="@+id/reset_button"
+        android:onClick="resetDistance"
+        android:textSize="24sp"
+        android:layout_below="@+id/current_time"
+        android:layout_alignRight="@+id/distance_units"
+        />
+</RelativeLayout>
+<Space
+    android:layout_weight="1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+
+    <fragment android:name="com.grandpaj.BikeDash.RemoteManager"
+        android:id="@+id/RemoteA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="#fd0095ff"
+        tools:layout="@layout/fragment_battery" />
+
+
+    <Space
+    android:layout_weight="1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+</LinearLayout>
