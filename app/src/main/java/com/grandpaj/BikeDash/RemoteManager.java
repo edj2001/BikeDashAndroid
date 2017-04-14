@@ -162,7 +162,8 @@ public class RemoteManager extends BluetoothChatFragment {
         String mySnackbarText = "Battery Charge Reset";
         Snackbar mySnackbar = Snackbar.make(view,mySnackbarText,Snackbar.LENGTH_LONG);
         mySnackbar.show();
-        //send reset string to remote "qr:C9F64A58"
+        //send reset string to remote "rq:C9F64A58"
+        sendMessage("");
         sendMessage("rq:C9F64A58");
 
     }
