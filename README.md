@@ -21,3 +21,6 @@ Portions Copyright 2014 The Android Open Source Project
  limitations under the License.
  
  
+I can't find where I got the 7 segment font file from.  Please let me know if it's yours and I will credit it.
+
+The beginning of the GPS code came from here http://www.edumobile.org/android/device-speed-demo-in-android/ .
