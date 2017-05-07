@@ -29,7 +29,7 @@ public class RemoteManager extends BluetoothChatFragment {
     private DataText vBattery;
     private TextView iBattery;
     private TextView qBRemaining;
-    public double   QRecharged = 5.0;
+    public double   QRecharged = 4.4;
     private FragmentActivity activity;
     /**
     *@param numCRCmismatches total number of CRC mismatches in received strings
