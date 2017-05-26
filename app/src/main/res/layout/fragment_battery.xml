@@ -20,13 +20,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:rowCount="3"
-    android:columnCount="6">
+    android:columnCount="5">
         <DataDisplay.DataText
             android:id="@+id/vbattery"
             android:text="batt"
-            android:textSize="@dimen/small_text_size"
+            android:textSize="@dimen/display_text_size"
             android:gravity="right"
-            android:width="80dp"
+            android:width="120dp"
             myapp:Alarm1="&lt;30,Warning"
             myapp:Alarm2="&lt;26,Alarm"
             myapp:unitFieldReference="@+id/vbattery_units"
@@ -41,8 +41,8 @@
         <DataDisplay.DataText
             android:id="@+id/ibattery"
             android:text="batt"
-            android:textSize="@dimen/small_text_size"
-            android:width="80dp"
+            android:textSize="@dimen/display_text_size"
+            android:width="120dp"
             android:gravity="right"
             myapp:Alarm1="&gt;8,Warning"
             myapp:Alarm2="&gt;14,Alarm"
@@ -54,25 +54,14 @@
             android:text="A"
             android:textSize="@dimen/small_text_size"
             android:paddingLeft="8dp" />
-        <Button
-            android:id="@+id/button_send"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="@dimen/button_padding"
-            android:paddingRight="@dimen/button_padding"
-            android:background="#fd0095ff"
-            android:textColor="#fff"
-            android:text="@string/send"
-            android:textSize="@dimen/Button_font_size"
-            android:textAlignment="center"
-            android:gravity="right|center_vertical" />
+
 
 
         <DataDisplay.DataText
             android:id="@+id/qbatteryused"
             android:text="batt"
-            android:textSize="@dimen/small_text_size"
-            android:width="80dp"
+            android:textSize="@dimen/display_text_size"
+            android:width="120dp"
             android:gravity="right"
             android:longClickable="true"
             myapp:varName="qb"/>
@@ -86,8 +75,8 @@
         <DataDisplay.DataText
             android:id="@+id/qbatpctremaining"
             android:text="rem"
-            android:textSize="@dimen/small_text_size"
-            android:width="80dp"
+            android:textSize="@dimen/display_text_size"
+            android:width="120dp"
             android:gravity="right"
             myapp:Alarm1="&lt;10,Warning"
             myapp:Alarm2="&lt;5,Alarm"

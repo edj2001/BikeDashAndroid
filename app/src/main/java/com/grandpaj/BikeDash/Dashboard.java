@@ -15,6 +15,7 @@ import android.graphics.Typeface;
 import android.location.Location;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Spannable;
 import android.text.SpannableString;
@@ -118,6 +119,21 @@ public class Dashboard extends AppCompatActivity implements GPSCallback {
         tvSpeed.setText(getString(R.string.info));
 
         measurement_index = AppSettings.getMeasureUnit(this);
+
+        TextView distanceMessage = (TextView) findViewById(R.id.distance_message);
+        distanceMessage.setOnLongClickListener(new View.OnLongClickListener() {
+                                                public boolean onLongClick(View v) {
+                                                    // send command to reset distance travelled to 0.0
+                                                    resetDistance(v);
+                                                    String mySnackbarText = "Distance travelled Reset";
+                                                    Snackbar mySnackbar = Snackbar.make(v,mySnackbarText,Snackbar.LENGTH_LONG);
+                                                    mySnackbar.show();
+
+                                                    return true;
+                                                }
+                                            }
+        );
+
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();

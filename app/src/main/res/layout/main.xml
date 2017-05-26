@@ -50,7 +50,7 @@
         android:id="@+id/current_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/small_text_size"
+        android:textSize="@dimen/display_text_size"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="12dp"
         android:paddingTop="0dp"
@@ -61,12 +61,13 @@
         android:id="@+id/distance_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/small_text_size"
+        android:textSize="@dimen/display_text_size"
         android:text="@string/noUpdate2"
         android:layout_marginRight="8dp"
         android:gravity="right"
         android:layout_toLeftOf="@+id/distance_units"
-        android:layout_alignBaseline="@+id/current_time" />
+        android:layout_alignBaseline="@+id/current_time"
+        android:longClickable="true"/>
     <TextView
         android:id="@+id/distance_units"
         android:layout_width="wrap_content"
@@ -77,16 +78,7 @@
         android:gravity="right"
         android:layout_alignBaseline="@+id/current_time"
         android:layout_alignParentRight="true" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/reset"
-        android:id="@+id/reset_button"
-        android:onClick="resetDistance"
-        android:textSize="24sp"
-        android:layout_below="@+id/current_time"
-        android:layout_alignRight="@+id/distance_units"
-        />
+
 </RelativeLayout>
 <Space
     android:layout_weight="1"
@@ -97,7 +89,6 @@
         android:id="@+id/RemoteA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:background="#fd0095ff"
         tools:layout="@layout/fragment_battery" />
 

@@ -63,7 +63,7 @@ public class RemoteManager extends BluetoothChatFragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         android.util.Log.d(TAG,"onViewCreated");
-        mConnectButton = (Button) view.findViewById(R.id.button_send);
+        //mConnectButton = (Button) view.findViewById(R.id.button_send);
         mBatteryUsed = (TextView) view.findViewById(R.id.qbatteryused);
         iBattery = (TextView) view.findViewById(R.id.ibattery);
         vBattery = (DataText) view.findViewById(R.id.vbattery);
@@ -79,17 +79,17 @@ public class RemoteManager extends BluetoothChatFragment {
         android.util.Log.d(TAG, "setupChat()");
 
         // Initialize the connect button with a listener that for click events
-        mConnectButton.setOnClickListener(new View.OnClickListener() {
+/*        mConnectButton.setOnClickListener(new View.OnClickListener() {
                                               public void onClick(View v) {
                                                   // start connection process
                                                   connectRemote(v);
                                               }
                                           }
         );
-
+*/
         mBatteryUsed.setOnLongClickListener(new View.OnLongClickListener() {
                                               public boolean onLongClick(View v) {
-                                                  // start connection process
+                                                  // send command to reset battery used to 0.0
                                                   resetBatteryUsed(v);
                                                   return true;
                                               }
