@@ -36,7 +36,7 @@
             android:text="V"
             android:textSize="@dimen/small_text_size"
             android:paddingLeft="8dp" />
-        <Space
+        <android.support.v4.widget.Space
             android:layout_width="12dp" />
         <DataDisplay.DataText
             android:id="@+id/ibattery"
@@ -71,7 +71,7 @@
             android:text="Ah"
             android:textSize="@dimen/small_text_size"
             android:paddingLeft="8dp" />
-        <Space />
+        <android.support.v4.widget.Space />
         <DataDisplay.DataText
             android:id="@+id/qbatpctremaining"
             android:text="rem"
@@ -88,7 +88,7 @@
             android:text="%"
             android:textSize="@dimen/small_text_size"
             android:paddingLeft="8dp" />
-        <Space />
+        <android.support.v4.widget.Space />
 
 </GridLayout>
 
