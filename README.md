@@ -2,8 +2,8 @@
 Android Half of Bike Dash
 
 This is the android app that communicates via bluetooth with the Arduino circuit in BikeDashArduino.
-Last built with Android Studio 2.3.1.  
-Tested only on Moto G version 1 with Lollipop.
+Last built with Android Studio 2.3.2.  
+Tested only on Moto G version 1 with Lollipop and LG Optimus One with Gingerbread.  It should now work back to API 9, Gingerbread.
 Doesn't work immediately on a Samsung S5 with Marshmallow.  I suspect it's a permissions issue.
 
 Portions Copyright 2014 The Android Open Source Project
