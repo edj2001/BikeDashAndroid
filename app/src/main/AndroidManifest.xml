@@ -20,7 +20,7 @@
             </intent-filter>
 
         </activity>
-
+        <activity android:name=".UserSettingsActivity"/>
         <activity
             android:name="com.grandpaj.library2.bluetooth.DeviceListActivity"
             android:configChanges="orientation|keyboardHidden"

@@ -2,6 +2,7 @@ package com.grandpaj.BikeDash;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 
 public class AppSettings {
     private static final String UNIT_STRING = "MeasureUnit";
@@ -27,5 +28,13 @@ public class AppSettings {
 
         editor.putInt(tag, value);
         editor.commit();
+    }
+    public static double getBatteryCapacity(Context context) {
+        SharedPreferences pref;
+        pref = PreferenceManager
+                .getDefaultSharedPreferences(context);
+        String keyString = context.getString(R.string.pref_battery_key);
+        String valueString = context.getString(R.string.pref_batteryCapacityDefault);
+        return Double.parseDouble(pref.getString(keyString, valueString));
     }
 }

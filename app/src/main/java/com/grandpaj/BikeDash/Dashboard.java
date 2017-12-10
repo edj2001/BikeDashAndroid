@@ -10,6 +10,7 @@ import java.util.GregorianCalendar;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.location.Location;
@@ -34,7 +35,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 
 import DataDisplay.DataText;
 
-public class Dashboard extends AppCompatActivity implements GPSCallback {
+public class Dashboard extends AppCompatActivity implements GPSCallback, RemoteManager.remotePreferencesListener {
     private GPSManager gpsManager = null;
     private double speed = 0.0;
     private double calculatedSpeed = 0.0;
@@ -49,6 +50,9 @@ public class Dashboard extends AppCompatActivity implements GPSCallback {
     private Calendar calendar = new GregorianCalendar();
     private SharedPreferences mPrefs;
     private Typeface face;
+
+    private static final int RESULT_SETTINGS = 1;
+
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -255,6 +259,11 @@ public class Dashboard extends AppCompatActivity implements GPSCallback {
 
                 break;
             }
+            case R.id.menu_settings:
+                Intent i = new Intent(this, UserSettingsActivity.class);
+                startActivityForResult(i, RESULT_SETTINGS);
+                break;
+
             default: {
                 result = super.onOptionsItemSelected(item);
 
@@ -338,5 +347,10 @@ public class Dashboard extends AppCompatActivity implements GPSCallback {
         });
 
         builder.create().show();
+    }
+
+    public double getPrefQBattery (){
+        //return 10.0;
+        return AppSettings.getBatteryCapacity(this);
     }
 }

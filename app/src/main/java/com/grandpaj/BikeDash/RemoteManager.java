@@ -24,12 +24,20 @@ import DataDisplay.DataText;
  */
 public class RemoteManager extends BluetoothChatFragment {
 
+    // Container Activity must implement this interface
+    public interface remotePreferencesListener {
+        double getPrefQBattery ();
+
+    }
+
+    remotePreferencesListener parentActivity;
+
     private Button mConnectButton;
     private TextView mBatteryUsed;
     private DataText vBattery;
     private TextView iBattery;
     private TextView qBRemaining;
-    public double   QRecharged = 4.4;
+    public Double   QRecharged = 4.4;
     private FragmentActivity activity;
     /**
     *@param numCRCmismatches total number of CRC mismatches in received strings
@@ -49,7 +57,14 @@ public class RemoteManager extends BluetoothChatFragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-
+        // This makes sure that the container activity has implemented
+        // the callback interface. If not, it throws an exception
+        try {
+            parentActivity = (remotePreferencesListener) context;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(context.toString()
+                    + " must implement remotePreferencesListener");
+        }
     }
 
     @Override
@@ -68,6 +83,8 @@ public class RemoteManager extends BluetoothChatFragment {
         iBattery = (TextView) view.findViewById(R.id.ibattery);
         vBattery = (DataText) view.findViewById(R.id.vbattery);
         qBRemaining = (TextView) view.findViewById(R.id.qbatpctremaining);
+        QRecharged = parentActivity.getPrefQBattery();
+        Log.d("Battery Capacity: ",QRecharged.toString());
         activity = getActivity();
     }
 

@@ -14,4 +14,9 @@
     <string name="noUpdate1">-</string>
     <string name="noUpdate2">--</string>
     <string name="noUpdatet">-</string>
+    <string name="pref_batteryCapacity_name">Set battery capacity</string>
+    <string name="pref_batteryCapacity_summary">Set your battery capacity in Ah</string>
+    <string name="pref_battery_key">"prefbatteryCapacity"</string>
+    <string name="pref_batteryCapacityDefault">"10.0"</string>
+
 </resources>
