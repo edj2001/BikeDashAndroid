@@ -48,7 +48,7 @@
             myapp:Alarm2="&gt;14,Alarm"
             myapp:unitFieldReference="@+id/ibattery_units"
             myapp:varName="ib"/>
-            />
+
         <TextView
             android:id="@+id/ibattery_units"
             android:text="A"
