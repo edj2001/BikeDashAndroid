@@ -1,4 +1,3 @@
-*.iml
 .gradle
 *.apk
 /local.properties
