@@ -6,6 +6,8 @@ Last built with Android Studio 2.3.2.
 Tested only on Moto G version 1 with Lollipop and LG Optimus One with Gingerbread.  It should now work back to API 9, Gingerbread.
 Doesn't work immediately on a Samsung S5 with Marshmallow.  I suspect it's a permissions issue.
 
+Note that if you want to open this project directly in Android Studio, it must be in a directory called "DeviceSpeedDemo".  Otherwise you have to import it into Studio.
+
 Portions Copyright 2014 The Android Open Source Project
 
  Licensed under the Apache License, Version 2.0 (the "License");
